@@ -10,5 +10,5 @@ I challenged myself to create 10 Projects using Vanilla JavaScript, CSS, and HTM
 - ❌ Movies App
 - ❌ GitHub Profiles
 - ❌ Drawing App
-- ❌ Password Generator
+- ✅ Password Generator
 - ❌ Weather App
