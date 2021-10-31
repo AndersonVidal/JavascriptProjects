@@ -51,7 +51,7 @@ function generateChar() {
         chars.push(getSymbolCase());
     }
 
-    return char[
+    return chars[
         Math.floor(Math.random() * chars.length)
     ];
 }

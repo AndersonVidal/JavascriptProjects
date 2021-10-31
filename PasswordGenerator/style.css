@@ -63,10 +63,10 @@ body {
 }
 
 .form-control {
-    color: #ddd;
+    color: #eee;
     display: flex;
     justify-content: space-between;
-    margin: 0.5rem 0;
+    margin: 0.75rem 0;
 }
 
 .generate {
