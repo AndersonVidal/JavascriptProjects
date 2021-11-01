@@ -1,4 +1,5 @@
 const pwEl = document.getElementById('pw');
+const pwtxtEl = document.getElementById('pwtxt');
 const copyEl = document.getElementById('copy');
 const lenEl = document.getElementById('len');
 const upperEl = document.getElementById('upper');
@@ -45,11 +46,13 @@ function generateChar() {
         chars.push(getLowerCase());
     }
     if (numberEl.checked) {
-        chars.push(getNumberCase());
+        chars.push(getNumber());
     }
     if (symbolEl.checked) {
-        chars.push(getSymbolCase());
+        chars.push(getSymbol());
     }
+
+    if (chars.length === 0) return '';
 
     return chars[
         Math.floor(Math.random() * chars.length)
@@ -65,7 +68,21 @@ function generatePassword() {
         password += char;
     }
 
-    pwEl.innerHTML = password;
+    pwtxtEl.innerHTML = password;
 }
 
 generateEl.addEventListener('click', generatePassword);
+
+copyEl.addEventListener('click', () => {
+    const txtarea = document.createElement('textarea');
+    const password = pwtxtEl.innerHTML;
+
+    if (!password) return;
+
+    txtarea.value = password;
+    document.body.appendChild(txtarea);
+    txtarea.select();
+    document.execCommand('copy');
+    txtarea.remove();
+    alert('Password copied to clipboard');
+})

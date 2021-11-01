@@ -10,9 +10,9 @@
     <body>
         <div class="pw-container">
             <div class="pw-header">
-                <div class="pw">
-                    Your Passworld
-                    <button>Copy to clipboard</button>
+                <div class="pw" id="pw">
+                    <span id="pwtxt">Your Passworld</span>
+                    <button id="copy">Copy to clipboard</button>
                 </div>
             </div>
             <div class="pw-body">
@@ -20,7 +20,7 @@
                     <label for="upper">
                         Password Length
                     </label>
-                    <input id="len" type="number" value="20" min="4" max="40" />
+                    <input id="len" type="number" value="20" min="4" max="35" />
                 </div>
                 <div class="form-control">
                     <label for="upper">

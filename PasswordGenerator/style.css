@@ -33,8 +33,9 @@ body {
     align-items: center;
     height: 70px;
     position: relative;
-    font-size: 2rem;
+    font-size: 1rem;
     padding: 1rem;
+    overflow: wrap;
 }
 
 .pw button {
@@ -48,14 +49,14 @@ body {
     position: absolute;
     top: 0;
     right: 0;
-    transform: translateY(0, -50%);
+    transform: translateY(0, 20%);
     transition: opacity 0.2s ease, transform 0.2s ease;
     opacity: 0;
 }
 
 .pw:hover button {
     opacity: 1;
-    transform: translate(0, -80%);
+    transform: translate(0, 0%);
 }
 
 .pw-body {
